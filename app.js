@@ -4,7 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/blog', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true });
 
 // Create a blog post schema
 const postSchema = new mongoose.Schema({
